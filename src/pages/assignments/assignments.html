@@ -1,0 +1,53 @@
+<!--
+  Generated template for the Assignments page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Assignments</ion-title>
+    <ion-buttons end>
+       <button ion-fab mini (click)="addAss()"><ion-icon name="add-circle"></ion-icon></button> 
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="back">
+
+	<ion-list>
+
+    
+	   
+	  <ion-item-sliding *ngFor="let assignment of assignments"  class="title">
+         <ion-item (click)="viewAss(assignment)">       
+                <h2>{{assignment.title}}</h2>
+        </ion-item>
+
+
+    
+
+ 
+            <ion-item-options>
+            <!-- this should be inside the edit icon (click)="editAss(assignment)" -->
+                <button ion-button icon-only  light (click)="editAss(assignment)">
+                    <ion-icon name="paper">Edit</ion-icon>
+                </button>
+                <button ion-button icon-only (click)="deleteAss(assignment)" danger>
+                    <ion-icon name="trash">Delete</ion-icon>
+                </button>
+            </ion-item-options>
+    </ion-item-sliding>
+
+	</ion-list>
+  <h3 *ngIf="assignments == null"> No assignments avalaible, use the add button to create new assignment</h3>
+	<ion-fab right bottom>
+    	<button ion-fab mini (click)="addAss()"><ion-icon name="add"></ion-icon></button>   
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,38 @@
+<!--
+  Generated template for the PastDetail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{past.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	 <div *ngIf="hasPastquestions">
+      <ion-list>
+
+         <ion-item *ngFor="let pastquestion of pastquestions">
+            <ion-thumbnail item-left>
+               <img [src]="pastquestion.image">
+            </ion-thumbnail>
+            <h2>{{ pastquestion.title }} </h2>
+            <button
+               ion-button
+               clear
+               item-right
+               (click)="viewPast({'key':pastquestion.id, 'rev':pastquestion.rev })">
+                  View
+            </button>
+         </ion-item>
+
+      </ion-list>
+   </div>
+
+</ion-content>

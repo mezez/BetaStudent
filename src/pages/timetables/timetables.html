@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Timetables page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lecture Timetables</ion-title>
+    <ion-buttons end>
+       <button ion-fab mini (click)="addTimetable()"><ion-icon name="add-circle"></ion-icon></button> 
+    </ion-buttons>
+  </ion-navbar>
+ 
+
+</ion-header>
+
+
+<ion-content padding  class="back">
+
+	<ion-list>
+
+    
+     
+    <ion-item-sliding *ngFor="let timetable of timetables"  class="title">
+         <ion-item (click)="viewTimetable(timetable)">       
+                <h2>{{timetable.title}}</h2>
+        </ion-item>
+
+
+    
+
+ 
+            <ion-item-options>
+            <!-- this should be inside the edit icon (click)="editAss(assignment)" -->
+                <button ion-button icon-only  light (click)="editTimetable(timetable)">
+                    <ion-icon name="paper">Edit</ion-icon>
+                </button>
+                <button ion-button icon-only (click)="deleteTimetable(timetable)" danger>
+                    <ion-icon name="trash">Delete</ion-icon>
+                </button>
+            </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab right bottom>
+      <button ion-fab mini (click)="addTimetable()"><ion-icon name="add"></ion-icon></button>   
+  </ion-fab>
+
+</ion-content>

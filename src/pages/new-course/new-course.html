@@ -1,0 +1,62 @@
+<!--
+  Generated template for the NewAss page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-title>
+        New Course
+    </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+ 
+      <ion-item>
+        <ion-label floating>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Lecturer</ion-label>
+        <ion-input type="text" [(ngModel)]="lecturer"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Book(s)</ion-label>
+        <ion-input type="text" [(ngModel)]="books"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Lecture Days</ion-label>
+        <ion-input type="text" [(ngModel)]="ldays"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Test Day</ion-label>
+        <ion-input type="text" [(ngModel)]="tdays"></ion-input>
+      </ion-item>
+
+
+
+      <br>
+
+      <ion-item>
+        <ion-label>Exam Date</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="examdate"></ion-datetime>
+      </ion-item>
+ 
+    </ion-list>
+ 
+    <button block ion-button color="primary" (click)="saveCourse()">Save</button> 
+ 
+</ion-content>  

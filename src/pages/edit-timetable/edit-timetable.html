@@ -1,0 +1,78 @@
+<!--
+  Generated template for the EditTimetable page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-title>
+        Edit {{title}}
+    </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+ 
+      <ion-item>
+        <ion-label floating>Day</ion-label>
+        <ion-input type="text" [(ngModel)]="title" value={{this.title}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Eight - Nine</ion-label>
+        <ion-input type="text" [(ngModel)]="eightnine" value={{this.eightnine}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Nine - Ten</ion-label>
+        <ion-input type="text" [(ngModel)]="nineten" value={{this.nineten}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Ten - Eleven</ion-label>
+        <ion-input type="text" [(ngModel)]="teneleven" value={{this.teneleven}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Eleven -Twelve</ion-label>
+        <ion-input type="text" [(ngModel)]="eleventwelve" value={{this.eleventwelve}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Twelve - One</ion-label>
+        <ion-input type="text" [(ngModel)]="twelveone" value={{this.twelveone}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>One - Two</ion-label>
+        <ion-input type="text" [(ngModel)]="onetwo" value={{this.onetwo}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Two - Three</ion-label>
+        <ion-input type="text" [(ngModel)]="twothree" value={{this.twothree}}></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Three - Four</ion-label>
+        <ion-input type="text" [(ngModel)]="threefour" value={{this.threefour}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Four - Five</ion-label>
+        <ion-input type="text" [(ngModel)]="fourfive" value={{this.fourfive}}></ion-input>
+      </ion-item>
+
+ 
+    </ion-list>
+ 
+    <button block ion-button color="primary" (click)="saveTimetable(this)">Save</button> 
+ 
+</ion-content>
